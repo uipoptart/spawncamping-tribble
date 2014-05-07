@@ -21,6 +21,12 @@
 		76E030B6191AEB20004A8421 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03098191AEB20004A8421 /* UIKit.framework */; };
 		76E030BE191AEB20004A8421 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76E030BC191AEB20004A8421 /* InfoPlist.strings */; };
 		76E030C0191AEB20004A8421 /* GPUImageTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E030BF191AEB20004A8421 /* GPUImageTestTests.m */; };
+		76E030D3191AEDBF004A8421 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030D0191AEDB2004A8421 /* libGPUImage.a */; };
+		76E030E3191AEDE6004A8421 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030E2191AEDE6004A8421 /* AVFoundation.framework */; };
+		76E030E5191AEDEE004A8421 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030E4191AEDEE004A8421 /* CoreVideo.framework */; };
+		76E030E7191AEE0E004A8421 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030E6191AEE0E004A8421 /* CoreMedia.framework */; };
+		76E030E9191AEE16004A8421 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030E8191AEE16004A8421 /* OpenGLES.framework */; };
+		76E030EB191AEE1F004A8421 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030EA191AEE1F004A8421 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +36,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 76E03090191AEB20004A8421;
 			remoteInfo = GPUImageTest;
+		};
+		76E030CF191AEDB2004A8421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		76E030D1191AEDB2004A8421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
+			remoteInfo = GPUImageTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +73,12 @@
 		76E030BB191AEB20004A8421 /* GPUImageTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GPUImageTestTests-Info.plist"; sourceTree = "<group>"; };
 		76E030BD191AEB20004A8421 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76E030BF191AEB20004A8421 /* GPUImageTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageTestTests.m; sourceTree = "<group>"; };
+		76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		76E030E2191AEDE6004A8421 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		76E030E4191AEDEE004A8421 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		76E030E6191AEE0E004A8421 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		76E030E8191AEE16004A8421 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		76E030EA191AEE1F004A8421 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +86,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E030EB191AEE1F004A8421 /* QuartzCore.framework in Frameworks */,
+				76E030E9191AEE16004A8421 /* OpenGLES.framework in Frameworks */,
+				76E030E7191AEE0E004A8421 /* CoreMedia.framework in Frameworks */,
+				76E030E5191AEDEE004A8421 /* CoreVideo.framework in Frameworks */,
+				76E030E3191AEDE6004A8421 /* AVFoundation.framework in Frameworks */,
+				76E030D3191AEDBF004A8421 /* libGPUImage.a in Frameworks */,
 				76E03097191AEB20004A8421 /* CoreGraphics.framework in Frameworks */,
 				76E03099191AEB20004A8421 /* UIKit.framework in Frameworks */,
 				76E03095191AEB20004A8421 /* Foundation.framework in Frameworks */,
@@ -82,6 +114,7 @@
 		76E03088191AEB20004A8421 = {
 			isa = PBXGroup;
 			children = (
+				76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */,
 				76E0309A191AEB20004A8421 /* GPUImageTest */,
 				76E030B9191AEB20004A8421 /* GPUImageTestTests */,
 				76E03093191AEB20004A8421 /* Frameworks */,
@@ -101,6 +134,11 @@
 		76E03093191AEB20004A8421 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76E030EA191AEE1F004A8421 /* QuartzCore.framework */,
+				76E030E8191AEE16004A8421 /* OpenGLES.framework */,
+				76E030E6191AEE0E004A8421 /* CoreMedia.framework */,
+				76E030E4191AEDEE004A8421 /* CoreVideo.framework */,
+				76E030E2191AEDE6004A8421 /* AVFoundation.framework */,
 				76E03094191AEB20004A8421 /* Foundation.framework */,
 				76E03096191AEB20004A8421 /* CoreGraphics.framework */,
 				76E03098191AEB20004A8421 /* UIKit.framework */,
@@ -150,6 +188,15 @@
 				76E030BC191AEB20004A8421 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76E030CA191AEDB2004A8421 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76E030D0191AEDB2004A8421 /* libGPUImage.a */,
+				76E030D2191AEDB2004A8421 /* GPUImageTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +262,12 @@
 			mainGroup = 76E03088191AEB20004A8421;
 			productRefGroup = 76E03092191AEB20004A8421 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 76E030CA191AEDB2004A8421 /* Products */;
+					ProjectRef = 76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				76E03090191AEB20004A8421 /* GPUImageTest */,
@@ -222,6 +275,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		76E030D0191AEDB2004A8421 /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = 76E030CF191AEDB2004A8421 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76E030D2191AEDB2004A8421 /* GPUImageTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.octest;
+			remoteRef = 76E030D1191AEDB2004A8421 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		76E0308F191AEB20004A8421 /* Resources */ = {
@@ -378,6 +448,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GPUImageTest/GPUImageTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/GPUImage/framework/Source\"/**",
+				);
 				INFOPLIST_FILE = "GPUImageTest/GPUImageTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -391,6 +466,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GPUImageTest/GPUImageTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/GPUImage/framework/Source\"/**",
+				);
 				INFOPLIST_FILE = "GPUImageTest/GPUImageTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
