@@ -454,6 +454,7 @@
 					"\"$(SRCROOT)/GPUImage/framework/Source\"/**",
 				);
 				INFOPLIST_FILE = "GPUImageTest/GPUImageTest-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,6 +473,7 @@
 					"\"$(SRCROOT)/GPUImage/framework/Source\"/**",
 				);
 				INFOPLIST_FILE = "GPUImageTest/GPUImageTest-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -536,6 +538,7 @@
 				76E030C5191AEB20004A8421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76E030C6191AEB20004A8421 /* Build configuration list for PBXNativeTarget "GPUImageTestTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +547,7 @@
 				76E030C8191AEB20004A8421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
