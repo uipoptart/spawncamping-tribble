@@ -25,6 +25,21 @@
 
 #pragma mark - IBAction
 
+- (IBAction)crop:(id)sender
+{
+    GPUImagePicture *originalPicture = self.sourcePicture;
+    GPUImageBrightnessFilter *brightnessFilter = self.brightnessFilter;
+    
+    [originalPicture removeTarget:brightnessFilter];
+    
+    UIImage *croppedImage = [UIImage imageNamed:@"WID-small-two.jpg"];
+    GPUImagePicture *newSourcePicture = [[GPUImagePicture alloc] initWithImage:croppedImage];
+    [self setSourcePicture:newSourcePicture];
+    [newSourcePicture addTarget:brightnessFilter];
+    
+    [newSourcePicture processImage];
+}
+
 - (IBAction)contrastValueChanged:(id)sender
 {
     CGFloat value = [(UISlider *)sender value];
@@ -54,8 +69,7 @@
     [self setContrastFilter:contrastFilter];
     [self setBrightnessFilter:brightnessFilter];
     [self setSourcePicture: sourcePicture];
-    
-    [brightnessFilter forceProcessingAtSizeRespectingAspectRatio:gpuImageView.sizeInPixels];
+
     [sourcePicture addTarget:brightnessFilter];
     [brightnessFilter addTarget:contrastFilter];
     [contrastFilter addTarget:gpuImageView];

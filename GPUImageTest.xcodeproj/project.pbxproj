@@ -28,6 +28,7 @@
 		76E030E9191AEE16004A8421 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030E8191AEE16004A8421 /* OpenGLES.framework */; };
 		76E030EB191AEE1F004A8421 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030EA191AEE1F004A8421 /* QuartzCore.framework */; };
 		76E030ED191AF07A004A8421 /* WID-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76E030EC191AF07A004A8421 /* WID-small.jpg */; };
+		76E4F09F191C2F68001E5DA5 /* WID-small-two.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76E4F09E191C2F68001E5DA5 /* WID-small-two.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		76E030E8191AEE16004A8421 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		76E030EA191AEE1F004A8421 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		76E030EC191AF07A004A8421 /* WID-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WID-small.jpg"; sourceTree = "<group>"; };
+		76E4F09E191C2F68001E5DA5 /* WID-small-two.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WID-small-two.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				76E030AA191AEB20004A8421 /* ViewController.m */,
 				76E030AC191AEB20004A8421 /* Images.xcassets */,
 				76E030EC191AF07A004A8421 /* WID-small.jpg */,
+				76E4F09E191C2F68001E5DA5 /* WID-small-two.jpg */,
 				76E0309B191AEB20004A8421 /* Supporting Files */,
 			);
 			path = GPUImageTest;
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E4F09F191C2F68001E5DA5 /* WID-small-two.jpg in Resources */,
 				76E030AD191AEB20004A8421 /* Images.xcassets in Resources */,
 				76E0309F191AEB20004A8421 /* InfoPlist.strings in Resources */,
 				76E030ED191AF07A004A8421 /* WID-small.jpg in Resources */,
