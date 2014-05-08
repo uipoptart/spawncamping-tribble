@@ -8,7 +8,9 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet GPUImageView *gpuImageView;
-@property (strong, nonatomic) GPUImageTiltShiftFilter *filter;
+@property (strong, nonatomic) GPUImageBrightnessFilter *brightnessFilter;
+@property (strong, nonatomic) GPUImageContrastFilter *contrastFilter;
+@property (strong, nonatomic) GPUImagePicture *sourcePicture;
 
 @end
 
@@ -21,6 +23,24 @@
     [self setupDisplayFiltering];
 }
 
+#pragma mark - IBAction
+
+- (IBAction)contrastValueChanged:(id)sender
+{
+    CGFloat value = [(UISlider *)sender value];
+    [self.contrastFilter setContrast:value];
+    
+    [self.sourcePicture processImage];
+}
+
+- (IBAction)brightnessValueChanged:(id)sender
+{
+    CGFloat value = [(UISlider *)sender value];
+    [self.brightnessFilter setBrightness:value];
+    
+    [self.sourcePicture processImage];
+}
+
 #pragma mark - Private API
 
 - (void)setupDisplayFiltering
@@ -29,11 +49,16 @@
     
     GPUImagePicture *sourcePicture = [[GPUImagePicture alloc] initWithImage:image];
     GPUImageView *gpuImageView = self.gpuImageView;
-    GPUImageTiltShiftFilter *filter = [[GPUImageTiltShiftFilter alloc] init];
-   
-    [filter forceProcessingAtSizeRespectingAspectRatio:gpuImageView.sizeInPixels];
-    [sourcePicture addTarget:filter];
-    [filter addTarget:gpuImageView];
+    GPUImageBrightnessFilter *brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
+    GPUImageContrastFilter *contrastFilter = [[GPUImageContrastFilter alloc] init];
+    [self setContrastFilter:contrastFilter];
+    [self setBrightnessFilter:brightnessFilter];
+    [self setSourcePicture: sourcePicture];
+    
+    [brightnessFilter forceProcessingAtSizeRespectingAspectRatio:gpuImageView.sizeInPixels];
+    [sourcePicture addTarget:brightnessFilter];
+    [brightnessFilter addTarget:contrastFilter];
+    [contrastFilter addTarget:gpuImageView];
     
     [sourcePicture processImage];
 }
