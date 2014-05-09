@@ -10,4 +10,6 @@
 
 @interface PTOCRImageScrollView : UIScrollView
 
+- (void)configureScrollViewForImageSize:(CGSize)imageSize;
+
 @end

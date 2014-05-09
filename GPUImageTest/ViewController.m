@@ -4,17 +4,18 @@
 
 #import "ViewController.h"
 #import "GPUimage.h"
+#import "PTOCRImageScrollView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet GPUImageView *gpuImageView;
 @property (strong, nonatomic) GPUImageBrightnessFilter *brightnessFilter;
 @property (strong, nonatomic) GPUImageContrastFilter *contrastFilter;
 @property (strong, nonatomic) GPUImagePicture *sourcePicture;
 
-@property (weak, nonatomic)IBOutlet NSLayoutConstraint *gpuImageViewWidth;
-@property (weak, nonatomic)IBOutlet NSLayoutConstraint *gpuImageViewHeight;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *gpuImageViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *gpuImageViewHeight;
+@property (weak, nonatomic) IBOutlet GPUImageView *gpuImageView;
+@property (weak, nonatomic) IBOutlet PTOCRImageScrollView *scrollView;
 @end
 
 @implementation ViewController
@@ -23,8 +24,7 @@
 {
     [super viewDidLoad];
     
-    [self setupDisplayFiltering];
-}
+    [self setupDisplayFiltering];}
 
 #pragma mark - IBAction
 
@@ -59,11 +59,19 @@
     [self.sourcePicture processImage];
 }
 
+#pragma mark - Scroll View Delegate
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.gpuImageView;
+}
+
 #pragma mark - Private API
 
 - (void)setupDisplayFiltering
 {
     UIImage *image = [UIImage imageNamed:@"WID-small.jpg"];
+    
     [self.gpuImageViewWidth setConstant:image.size.width];
     [self.gpuImageViewHeight setConstant:image.size.height];
     
@@ -79,7 +87,9 @@
     [brightnessFilter addTarget:contrastFilter];
     [contrastFilter addTarget:gpuImageView];
     
-    [sourcePicture processImage];
+    [sourcePicture processImageWithCompletionHandler:^{
+        [self.scrollView configureScrollViewForImageSize:image.size];
+    }];
 }
 
 @end

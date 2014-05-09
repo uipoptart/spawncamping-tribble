@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRA-SV-lY4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRA-SV-lY4" customClass="PTOCRImageScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -36,6 +36,11 @@
                                     <constraint firstItem="yZi-4n-I0B" firstAttribute="leading" secondItem="zRA-SV-lY4" secondAttribute="leading" id="sQU-IG-BiZ"/>
                                     <constraint firstAttribute="trailing" secondItem="yZi-4n-I0B" secondAttribute="trailing" id="u7I-E2-RPS"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="wUt-io-FuO"/>
+                                    <outlet property="subviewXConstraint" destination="sQU-IG-BiZ" id="IBk-j0-p9n"/>
+                                    <outlet property="subviewYConstraint" destination="0M1-hc-0f0" id="0on-LE-g94"/>
+                                </connections>
                             </scrollView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RKq-T0-NLn" userLabel="Brightness Slider">
                                 <rect key="frame" x="18" y="480" width="284" height="31"/>
@@ -83,6 +88,7 @@
                         <outlet property="gpuImageView" destination="yZi-4n-I0B" id="d2i-ya-ZVw"/>
                         <outlet property="gpuImageViewHeight" destination="ioD-An-GRm" id="vcm-KH-eLQ"/>
                         <outlet property="gpuImageViewWidth" destination="hIa-Ct-rBb" id="29b-Ru-QWr"/>
+                        <outlet property="scrollView" destination="zRA-SV-lY4" id="UES-DN-UcJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
