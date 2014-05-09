@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		76AFC022191C80FE00FB68FA /* PTOCRImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */; };
+		76AFC04A191CA1B600FB68FA /* NMOCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC049191CA1B600FB68FA /* NMOCollectionViewController.m */; };
+		76AFC04D191CA2C500FB68FA /* NMOScrollingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC04C191CA2C500FB68FA /* NMOScrollingCell.m */; };
+		76AFC04F191D48BA00FB68FA /* chi.tif in Resources */ = {isa = PBXBuildFile; fileRef = 76AFC04E191D48BA00FB68FA /* chi.tif */; };
 		76E03095191AEB20004A8421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03094191AEB20004A8421 /* Foundation.framework */; };
 		76E03097191AEB20004A8421 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03096191AEB20004A8421 /* CoreGraphics.framework */; };
 		76E03099191AEB20004A8421 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03098191AEB20004A8421 /* UIKit.framework */; };
@@ -59,6 +62,11 @@
 /* Begin PBXFileReference section */
 		76AFC020191C80FE00FB68FA /* PTOCRImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTOCRImageScrollView.h; sourceTree = "<group>"; };
 		76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTOCRImageScrollView.m; sourceTree = "<group>"; };
+		76AFC048191CA1B600FB68FA /* NMOCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMOCollectionViewController.h; sourceTree = "<group>"; };
+		76AFC049191CA1B600FB68FA /* NMOCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMOCollectionViewController.m; sourceTree = "<group>"; };
+		76AFC04B191CA2C500FB68FA /* NMOScrollingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMOScrollingCell.h; sourceTree = "<group>"; };
+		76AFC04C191CA2C500FB68FA /* NMOScrollingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMOScrollingCell.m; sourceTree = "<group>"; };
+		76AFC04E191D48BA00FB68FA /* chi.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = chi.tif; sourceTree = "<group>"; };
 		76E03091191AEB20004A8421 /* GPUImageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E03094191AEB20004A8421 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		76E03096191AEB20004A8421 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,9 +170,14 @@
 				76E030A6191AEB20004A8421 /* Main.storyboard */,
 				76E030A9191AEB20004A8421 /* ViewController.h */,
 				76E030AA191AEB20004A8421 /* ViewController.m */,
+				76AFC04B191CA2C500FB68FA /* NMOScrollingCell.h */,
+				76AFC04C191CA2C500FB68FA /* NMOScrollingCell.m */,
+				76AFC048191CA1B600FB68FA /* NMOCollectionViewController.h */,
+				76AFC049191CA1B600FB68FA /* NMOCollectionViewController.m */,
 				76AFC020191C80FE00FB68FA /* PTOCRImageScrollView.h */,
 				76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */,
 				76E030AC191AEB20004A8421 /* Images.xcassets */,
+				76AFC04E191D48BA00FB68FA /* chi.tif */,
 				76E030EC191AF07A004A8421 /* WID-small.jpg */,
 				76E4F09E191C2F68001E5DA5 /* WID-small-two.jpg */,
 				76E0309B191AEB20004A8421 /* Supporting Files */,
@@ -309,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76AFC04F191D48BA00FB68FA /* chi.tif in Resources */,
 				76E4F09F191C2F68001E5DA5 /* WID-small-two.jpg in Resources */,
 				76E030AD191AEB20004A8421 /* Images.xcassets in Resources */,
 				76E0309F191AEB20004A8421 /* InfoPlist.strings in Resources */,
@@ -333,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E030AB191AEB20004A8421 /* ViewController.m in Sources */,
+				76AFC04A191CA1B600FB68FA /* NMOCollectionViewController.m in Sources */,
+				76AFC04D191CA2C500FB68FA /* NMOScrollingCell.m in Sources */,
 				76E030A5191AEB20004A8421 /* AppDelegate.m in Sources */,
 				76AFC022191C80FE00FB68FA /* PTOCRImageScrollView.m in Sources */,
 				76E030A1191AEB20004A8421 /* main.m in Sources */,

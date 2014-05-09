@@ -8,6 +8,7 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *subviewYConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *subviewXConstraint;
+@property (weak, nonatomic) IBOutlet UIView *viewToCenter;
 
 @end
 
@@ -15,7 +16,7 @@
 
 - (void)layoutSubviews
 {
-    [self _centerSubview:self.subviews[0]];
+    [self _centerSubview:self.viewToCenter];
     [super layoutSubviews];
 }
 

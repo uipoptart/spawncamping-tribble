@@ -70,7 +70,7 @@
 
 - (void)setupDisplayFiltering
 {
-    UIImage *image = [UIImage imageNamed:@"WID-small.jpg"];
+    UIImage *image = [UIImage imageNamed:@"chi.tif"];
     
     [self.gpuImageViewWidth setConstant:image.size.width];
     [self.gpuImageViewHeight setConstant:image.size.height];

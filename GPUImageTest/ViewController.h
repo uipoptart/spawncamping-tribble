@@ -6,4 +6,7 @@
 
 @interface ViewController : UIViewController
 
+// Green background storyboard uses container view with image
+// Orange background just places image view in scroll view
+
 @end
