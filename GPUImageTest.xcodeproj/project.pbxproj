@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76AFC022191C80FE00FB68FA /* PTOCRImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */; };
 		76E03095191AEB20004A8421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03094191AEB20004A8421 /* Foundation.framework */; };
 		76E03097191AEB20004A8421 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03096191AEB20004A8421 /* CoreGraphics.framework */; };
 		76E03099191AEB20004A8421 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03098191AEB20004A8421 /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76AFC020191C80FE00FB68FA /* PTOCRImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTOCRImageScrollView.h; sourceTree = "<group>"; };
+		76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTOCRImageScrollView.m; sourceTree = "<group>"; };
 		76E03091191AEB20004A8421 /* GPUImageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E03094191AEB20004A8421 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		76E03096191AEB20004A8421 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +162,8 @@
 				76E030A6191AEB20004A8421 /* Main.storyboard */,
 				76E030A9191AEB20004A8421 /* ViewController.h */,
 				76E030AA191AEB20004A8421 /* ViewController.m */,
+				76AFC020191C80FE00FB68FA /* PTOCRImageScrollView.h */,
+				76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */,
 				76E030AC191AEB20004A8421 /* Images.xcassets */,
 				76E030EC191AF07A004A8421 /* WID-small.jpg */,
 				76E4F09E191C2F68001E5DA5 /* WID-small-two.jpg */,
@@ -329,6 +334,7 @@
 			files = (
 				76E030AB191AEB20004A8421 /* ViewController.m in Sources */,
 				76E030A5191AEB20004A8421 /* AppDelegate.m in Sources */,
+				76AFC022191C80FE00FB68FA /* PTOCRImageScrollView.m in Sources */,
 				76E030A1191AEB20004A8421 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
