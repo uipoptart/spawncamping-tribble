@@ -12,6 +12,9 @@
 @property (strong, nonatomic) GPUImageContrastFilter *contrastFilter;
 @property (strong, nonatomic) GPUImagePicture *sourcePicture;
 
+@property (weak, nonatomic)IBOutlet NSLayoutConstraint *gpuImageViewWidth;
+@property (weak, nonatomic)IBOutlet NSLayoutConstraint *gpuImageViewHeight;
+
 @end
 
 @implementation ViewController
@@ -61,6 +64,8 @@
 - (void)setupDisplayFiltering
 {
     UIImage *image = [UIImage imageNamed:@"WID-small.jpg"];
+    [self.gpuImageViewWidth setConstant:image.size.width];
+    [self.gpuImageViewHeight setConstant:image.size.height];
     
     GPUImagePicture *sourcePicture = [[GPUImagePicture alloc] initWithImage:image];
     GPUImageView *gpuImageView = self.gpuImageView;

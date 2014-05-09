@@ -16,11 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZi-4n-I0B" customClass="GPUImageView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRA-SV-lY4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZi-4n-I0B" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="hIa-Ct-rBb"/>
+                                            <constraint firstAttribute="height" constant="568" id="ioD-An-GRm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yZi-4n-I0B" firstAttribute="top" secondItem="zRA-SV-lY4" secondAttribute="top" id="0M1-hc-0f0"/>
+                                    <constraint firstAttribute="bottom" secondItem="yZi-4n-I0B" secondAttribute="bottom" id="igM-cL-FHR"/>
+                                    <constraint firstItem="yZi-4n-I0B" firstAttribute="leading" secondItem="zRA-SV-lY4" secondAttribute="leading" id="sQU-IG-BiZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yZi-4n-I0B" secondAttribute="trailing" id="u7I-E2-RPS"/>
+                                </constraints>
+                            </scrollView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RKq-T0-NLn" userLabel="Brightness Slider">
                                 <rect key="frame" x="18" y="480" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -49,22 +65,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yZi-4n-I0B" secondAttribute="bottom" id="1h4-ot-qwP"/>
                             <constraint firstAttribute="trailing" secondItem="RKq-T0-NLn" secondAttribute="trailing" constant="20" id="26x-fG-oq3"/>
                             <constraint firstItem="3Ys-81-xj7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="HTn-Jj-2m3"/>
                             <constraint firstItem="3Ys-81-xj7" firstAttribute="top" secondItem="RKq-T0-NLn" secondAttribute="bottom" constant="8" id="J98-Gg-XXs"/>
-                            <constraint firstItem="yZi-4n-I0B" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="NMW-ZL-nh0"/>
+                            <constraint firstItem="zRA-SV-lY4" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="NNv-h4-Ob0"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3Ys-81-xj7" secondAttribute="bottom" constant="20" id="Ovr-3N-quY"/>
-                            <constraint firstItem="yZi-4n-I0B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="av9-I1-peT"/>
-                            <constraint firstAttribute="trailing" secondItem="yZi-4n-I0B" secondAttribute="trailing" id="kuD-L4-utg"/>
+                            <constraint firstAttribute="trailing" secondItem="zRA-SV-lY4" secondAttribute="trailing" id="V3T-dw-YPh"/>
                             <constraint firstItem="5Ca-uN-68g" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="lcK-mS-BG6"/>
                             <constraint firstItem="5Ca-uN-68g" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="nut-tZ-dTL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zRA-SV-lY4" secondAttribute="bottom" id="pbD-3X-W0t"/>
                             <constraint firstAttribute="trailing" secondItem="3Ys-81-xj7" secondAttribute="trailing" constant="20" id="pqe-jr-w0b"/>
                             <constraint firstItem="RKq-T0-NLn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="utj-eu-Maj"/>
+                            <constraint firstItem="zRA-SV-lY4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="yvi-KY-BtO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gpuImageView" destination="yZi-4n-I0B" id="d2i-ya-ZVw"/>
+                        <outlet property="gpuImageViewHeight" destination="ioD-An-GRm" id="vcm-KH-eLQ"/>
+                        <outlet property="gpuImageViewWidth" destination="hIa-Ct-rBb" id="29b-Ru-QWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
