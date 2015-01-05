@@ -3,8 +3,7 @@
 //
 
 #import "ViewController.h"
-#import "GPUimage.h"
-#import "PTOCRImageScrollView.h"
+#import "GPUImage.h"
 
 @interface ViewController () <UIScrollViewDelegate>
 
@@ -15,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *gpuImageViewWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *gpuImageViewHeight;
 @property (weak, nonatomic) IBOutlet GPUImageView *gpuImageView;
-@property (weak, nonatomic) IBOutlet PTOCRImageScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation ViewController
@@ -24,57 +23,19 @@
 {
     [super viewDidLoad];
     
-    [self setupDisplayFiltering];}
-
-#pragma mark - IBAction
-
-- (IBAction)crop:(id)sender
-{
-    GPUImagePicture *originalPicture = self.sourcePicture;
-    GPUImageBrightnessFilter *brightnessFilter = self.brightnessFilter;
+    UIImage *image = [UIImage imageNamed:@"Alice.png"];
+    [self _setupDisplayFilteringWithImage:image];
+    [self _configureScrollViewForImageSize:image.size];
     
-    [originalPicture removeTarget:brightnessFilter];
-    
-    UIImage *croppedImage = [UIImage imageNamed:@"WID-small-two.jpg"];
-    GPUImagePicture *newSourcePicture = [[GPUImagePicture alloc] initWithImage:croppedImage];
-    [self setSourcePicture:newSourcePicture];
-    [newSourcePicture addTarget:brightnessFilter];
-    
-    [newSourcePicture processImage];
-}
-
-- (IBAction)contrastValueChanged:(id)sender
-{
-    CGFloat value = [(UISlider *)sender value];
-    [self.contrastFilter setContrast:value];
-    
-    [self.sourcePicture processImage];
-}
-
-- (IBAction)brightnessValueChanged:(id)sender
-{
-    CGFloat value = [(UISlider *)sender value];
-    [self.brightnessFilter setBrightness:value];
-    
-    [self.sourcePicture processImage];
-}
-
-#pragma mark - Scroll View Delegate
-
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
-    return self.gpuImageView;
 }
 
 #pragma mark - Private API
 
-- (void)setupDisplayFiltering
+- (void)_setupDisplayFilteringWithImage:(UIImage *)image
 {
-    UIImage *image = [UIImage imageNamed:@"chi.tif"];
-    
     [self.gpuImageViewWidth setConstant:image.size.width];
     [self.gpuImageViewHeight setConstant:image.size.height];
-    
+
     GPUImagePicture *sourcePicture = [[GPUImagePicture alloc] initWithImage:image];
     GPUImageView *gpuImageView = self.gpuImageView;
     GPUImageBrightnessFilter *brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
@@ -86,10 +47,36 @@
     [sourcePicture addTarget:brightnessFilter];
     [brightnessFilter addTarget:contrastFilter];
     [contrastFilter addTarget:gpuImageView];
+    [sourcePicture processImage];
+}
+
+- (void)_configureScrollViewForImageSize:(CGSize)imageSize
+{
+    UIScrollView *scrollView = self.scrollView;
+    CGSize boundsSize = scrollView.bounds.size;
     
-    [sourcePicture processImageWithCompletionHandler:^{
-        [self.scrollView configureScrollViewForImageSize:image.size];
-    }];
+    CGFloat xScale = boundsSize.width  / imageSize.width;
+    CGFloat yScale = boundsSize.height / imageSize.height;
+    
+    BOOL imagePortrait = imageSize.height > imageSize.width;
+    BOOL phonePortrait = boundsSize.height > boundsSize.width;
+    CGFloat minScale = imagePortrait == phonePortrait ? xScale : MIN(xScale, yScale);
+    
+    CGFloat maxScale = 1.0;
+    if (minScale > maxScale) {
+        minScale = maxScale;
+    }
+    
+    [scrollView setMaximumZoomScale:maxScale];
+    [scrollView setMinimumZoomScale:minScale];
+    [scrollView setZoomScale:minScale];
+}
+
+#pragma mark - Scroll View Delegate
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.gpuImageView;
 }
 
 @end

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DXl-M4-6Sw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oVf-26-2D6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Collection View Controller-->
@@ -27,15 +28,12 @@
                                     <subviews>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpc-Hi-nYn" customClass="PTOCRImageScrollView">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9K-Ef-Epg" userLabel="Container">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owu-ly-WbE" customClass="GPUImageView">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="300" id="gYc-oG-ntZ"/>
@@ -95,112 +93,6 @@
             <point key="canvasLocation" x="4" y="563"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="bq8-oI-GnP">
-            <objects>
-                <viewController id="DXl-M4-6Sw" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WDK-Xx-N8A"/>
-                        <viewControllerLayoutGuide type="bottom" id="gid-Pu-bq6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5RM-qF-Dht">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-8B-qjf" customClass="PTOCRImageScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3om-kI-QRl">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAV-5N-PNh" customClass="GPUImageView">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="YrP-Wj-gkf"/>
-                                                    <constraint firstAttribute="height" constant="400" id="zgg-em-ZUF"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="JAV-5N-PNh" firstAttribute="leading" secondItem="3om-kI-QRl" secondAttribute="leading" id="Bbn-RD-aRm"/>
-                                            <constraint firstAttribute="trailing" secondItem="JAV-5N-PNh" secondAttribute="trailing" id="CXj-7s-xDT"/>
-                                            <constraint firstAttribute="bottom" secondItem="JAV-5N-PNh" secondAttribute="bottom" id="LXe-Mb-Vcm"/>
-                                            <constraint firstItem="JAV-5N-PNh" firstAttribute="top" secondItem="3om-kI-QRl" secondAttribute="top" id="bdr-UK-AKa"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.29019609089999998" green="0.48235294220000002" blue="0.75294119120000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="3om-kI-QRl" firstAttribute="top" secondItem="aKN-8B-qjf" secondAttribute="top" id="MJL-C6-SZo"/>
-                                    <constraint firstAttribute="width" constant="300" id="RZ8-0Q-AtK"/>
-                                    <constraint firstAttribute="height" constant="400" id="Tkb-Cr-YAC"/>
-                                    <constraint firstAttribute="trailing" secondItem="3om-kI-QRl" secondAttribute="trailing" id="XTZ-xp-aQN"/>
-                                    <constraint firstItem="3om-kI-QRl" firstAttribute="leading" secondItem="aKN-8B-qjf" secondAttribute="leading" id="aPo-lJ-qf5"/>
-                                    <constraint firstAttribute="bottom" secondItem="3om-kI-QRl" secondAttribute="bottom" id="yBx-Tr-prR"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="DXl-M4-6Sw" id="5CZ-wR-fvz"/>
-                                    <outlet property="subviewXConstraint" destination="aPo-lJ-qf5" id="Nwc-Mj-B2m"/>
-                                    <outlet property="subviewYConstraint" destination="MJL-C6-SZo" id="Jkh-W1-DAj"/>
-                                    <outlet property="viewToCenter" destination="JAV-5N-PNh" id="UNL-6o-EIi"/>
-                                </connections>
-                            </scrollView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zQk-qq-ScA" userLabel="Brightness Slider">
-                                <rect key="frame" x="18" y="480" width="284" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="brightnessValueChanged:" destination="DXl-M4-6Sw" eventType="valueChanged" id="s4i-33-3hV"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf6-Je-4vL">
-                                <rect key="frame" x="20" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Crop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="crop:" destination="DXl-M4-6Sw" eventType="touchUpInside" id="sTA-w8-w8Y"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="r4E-LA-p4Q" userLabel="Contrast Slider">
-                                <rect key="frame" x="18" y="518" width="284" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="contrastValueChanged:" destination="DXl-M4-6Sw" eventType="valueChanged" id="EQR-if-9RA"/>
-                                </connections>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zQk-qq-ScA" secondAttribute="trailing" constant="20" id="2hN-OG-IzD"/>
-                            <constraint firstItem="r4E-LA-p4Q" firstAttribute="top" secondItem="zQk-qq-ScA" secondAttribute="bottom" constant="8" id="9HR-9j-IQM"/>
-                            <constraint firstItem="zQk-qq-ScA" firstAttribute="leading" secondItem="5RM-qF-Dht" secondAttribute="leading" constant="20" id="B11-Et-h81"/>
-                            <constraint firstItem="gid-Pu-bq6" firstAttribute="top" secondItem="r4E-LA-p4Q" secondAttribute="bottom" constant="20" id="CCx-dj-fa1"/>
-                            <constraint firstItem="aKN-8B-qjf" firstAttribute="leading" secondItem="5RM-qF-Dht" secondAttribute="leading" id="FLV-AV-Ztj"/>
-                            <constraint firstAttribute="trailing" secondItem="r4E-LA-p4Q" secondAttribute="trailing" constant="20" id="HC4-Vf-bTu"/>
-                            <constraint firstItem="r4E-LA-p4Q" firstAttribute="leading" secondItem="5RM-qF-Dht" secondAttribute="leading" constant="20" id="Kcs-Yo-dsE"/>
-                            <constraint firstItem="wf6-Je-4vL" firstAttribute="leading" secondItem="5RM-qF-Dht" secondAttribute="leading" constant="20" id="br1-SG-xVn"/>
-                            <constraint firstItem="wf6-Je-4vL" firstAttribute="top" secondItem="WDK-Xx-N8A" secondAttribute="bottom" id="osS-OA-dw8"/>
-                            <constraint firstItem="aKN-8B-qjf" firstAttribute="top" secondItem="5RM-qF-Dht" secondAttribute="top" id="qjL-Lt-2hG"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="gpuImageView" destination="JAV-5N-PNh" id="lJI-hg-9fl"/>
-                        <outlet property="gpuImageViewHeight" destination="zgg-em-ZUF" id="6DD-D5-a2S"/>
-                        <outlet property="gpuImageViewWidth" destination="YrP-Wj-gkf" id="kdr-fu-6l5"/>
-                        <outlet property="scrollView" destination="aKN-8B-qjf" id="IgZ-i0-8Ab"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lIJ-ib-TOW" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="403" y="-82"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="9r0-Pm-i9l">
             <objects>
                 <viewController id="oVf-26-2D6" customClass="ViewController" sceneMemberID="viewController">
@@ -212,14 +104,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="771-dt-vqo" customClass="PTOCRImageScrollView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="771-dt-vqo">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c58-mN-Vew" customClass="GPUImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.7568975456" green="0.61003037120000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="laU-MA-EH3"/>
                                             <constraint firstAttribute="height" constant="400" id="q3D-bd-aDd"/>
@@ -237,49 +127,13 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="oVf-26-2D6" id="6wg-om-KDP"/>
-                                    <outlet property="subviewXConstraint" destination="wY6-69-GDj" id="GSG-4n-i8t"/>
-                                    <outlet property="subviewYConstraint" destination="o4v-st-6hn" id="7BX-1G-5um"/>
-                                    <outlet property="viewToCenter" destination="c58-mN-Vew" id="qzm-ZU-fQt"/>
                                 </connections>
                             </scrollView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jr7-XQ-QvJ" userLabel="Brightness Slider">
-                                <rect key="frame" x="18" y="480" width="284" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="brightnessValueChanged:" destination="oVf-26-2D6" eventType="valueChanged" id="sfM-tZ-RqR"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-bU-paV">
-                                <rect key="frame" x="20" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Crop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="crop:" destination="oVf-26-2D6" eventType="touchUpInside" id="yiv-zL-WHt"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-RN-SWt" userLabel="Contrast Slider">
-                                <rect key="frame" x="18" y="518" width="284" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="contrastValueChanged:" destination="oVf-26-2D6" eventType="valueChanged" id="ri3-pH-lki"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.38823529410000002" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="771-dt-vqo" firstAttribute="leading" secondItem="xVc-OT-I7W" secondAttribute="leading" id="4rJ-d6-gwg"/>
                             <constraint firstItem="771-dt-vqo" firstAttribute="top" secondItem="xVc-OT-I7W" secondAttribute="top" id="6n4-mK-s5m"/>
-                            <constraint firstItem="uzg-bU-paV" firstAttribute="leading" secondItem="xVc-OT-I7W" secondAttribute="leading" constant="20" id="8P8-ei-YPq"/>
-                            <constraint firstAttribute="trailing" secondItem="Jr7-XQ-QvJ" secondAttribute="trailing" constant="20" id="Ae5-Uw-cuY"/>
-                            <constraint firstAttribute="trailing" secondItem="xdG-RN-SWt" secondAttribute="trailing" constant="20" id="Dcf-8Z-IbU"/>
-                            <constraint firstItem="gfH-gU-SSb" firstAttribute="top" secondItem="xdG-RN-SWt" secondAttribute="bottom" constant="20" id="OoG-f9-77I"/>
-                            <constraint firstItem="xdG-RN-SWt" firstAttribute="leading" secondItem="xVc-OT-I7W" secondAttribute="leading" constant="20" id="oEa-th-o5l"/>
-                            <constraint firstItem="xdG-RN-SWt" firstAttribute="top" secondItem="Jr7-XQ-QvJ" secondAttribute="bottom" constant="8" id="vYW-aF-L7z"/>
-                            <constraint firstItem="Jr7-XQ-QvJ" firstAttribute="leading" secondItem="xVc-OT-I7W" secondAttribute="leading" constant="20" id="vkV-Ur-ddE"/>
-                            <constraint firstItem="uzg-bU-paV" firstAttribute="top" secondItem="ZQa-Cc-oYp" secondAttribute="bottom" id="xOd-s6-r0S"/>
                         </constraints>
                     </view>
                     <connections>
@@ -291,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTH-iv-M8o" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-82"/>
+            <point key="canvasLocation" x="46" y="-62"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
