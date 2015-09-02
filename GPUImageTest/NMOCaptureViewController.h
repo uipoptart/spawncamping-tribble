@@ -4,6 +4,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMOCollectionViewController : UICollectionViewController
+@interface NMOCaptureViewController : UIViewController
 
 @end

@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76AFC022191C80FE00FB68FA /* PTOCRImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */; };
-		76AFC04A191CA1B600FB68FA /* NMOCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC049191CA1B600FB68FA /* NMOCollectionViewController.m */; };
-		76AFC04D191CA2C500FB68FA /* NMOScrollingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AFC04C191CA2C500FB68FA /* NMOScrollingCell.m */; };
+		761846D01B96711C00DD355B /* NMOCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 761846CB1B96711C00DD355B /* NMOCaptureManager.m */; };
+		761846D21B96711C00DD355B /* NMOCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761846CF1B96711C00DD355B /* NMOCaptureViewController.m */; };
 		76AFC04F191D48BA00FB68FA /* chi.tif in Resources */ = {isa = PBXBuildFile; fileRef = 76AFC04E191D48BA00FB68FA /* chi.tif */; };
 		76E03095191AEB20004A8421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03094191AEB20004A8421 /* Foundation.framework */; };
 		76E03097191AEB20004A8421 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03096191AEB20004A8421 /* CoreGraphics.framework */; };
@@ -18,7 +17,6 @@
 		76E030A1191AEB20004A8421 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E030A0191AEB20004A8421 /* main.m */; };
 		76E030A5191AEB20004A8421 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E030A4191AEB20004A8421 /* AppDelegate.m */; };
 		76E030A8191AEB20004A8421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E030A6191AEB20004A8421 /* Main.storyboard */; };
-		76E030AB191AEB20004A8421 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E030AA191AEB20004A8421 /* ViewController.m */; };
 		76E030AD191AEB20004A8421 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E030AC191AEB20004A8421 /* Images.xcassets */; };
 		76E030B4191AEB20004A8421 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E030B3191AEB20004A8421 /* XCTest.framework */; };
 		76E030B5191AEB20004A8421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E03094191AEB20004A8421 /* Foundation.framework */; };
@@ -36,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7626AA031AC08E0900476838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
 		76E030B7191AEB20004A8421 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76E03089191AEB20004A8421 /* Project object */;
@@ -50,22 +55,13 @@
 			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
 			remoteInfo = GPUImage;
 		};
-		76E030D1191AEDB2004A8421 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76E030C9191AEDB2004A8421 /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
-			remoteInfo = GPUImageTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76AFC020191C80FE00FB68FA /* PTOCRImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTOCRImageScrollView.h; sourceTree = "<group>"; };
-		76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTOCRImageScrollView.m; sourceTree = "<group>"; };
-		76AFC048191CA1B600FB68FA /* NMOCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMOCollectionViewController.h; sourceTree = "<group>"; };
-		76AFC049191CA1B600FB68FA /* NMOCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMOCollectionViewController.m; sourceTree = "<group>"; };
-		76AFC04B191CA2C500FB68FA /* NMOScrollingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMOScrollingCell.h; sourceTree = "<group>"; };
-		76AFC04C191CA2C500FB68FA /* NMOScrollingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMOScrollingCell.m; sourceTree = "<group>"; };
+		761846CA1B96711C00DD355B /* NMOCaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMOCaptureManager.h; sourceTree = "<group>"; };
+		761846CB1B96711C00DD355B /* NMOCaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMOCaptureManager.m; sourceTree = "<group>"; };
+		761846CE1B96711C00DD355B /* NMOCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMOCaptureViewController.h; sourceTree = "<group>"; };
+		761846CF1B96711C00DD355B /* NMOCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMOCaptureViewController.m; sourceTree = "<group>"; };
 		76AFC04E191D48BA00FB68FA /* chi.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = chi.tif; sourceTree = "<group>"; };
 		76E03091191AEB20004A8421 /* GPUImageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E03094191AEB20004A8421 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,8 +74,6 @@
 		76E030A3191AEB20004A8421 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76E030A4191AEB20004A8421 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		76E030A7191AEB20004A8421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76E030A9191AEB20004A8421 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		76E030AA191AEB20004A8421 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		76E030AC191AEB20004A8421 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		76E030B2191AEB20004A8421 /* GPUImageTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPUImageTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E030B3191AEB20004A8421 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -168,14 +162,10 @@
 				76E030A3191AEB20004A8421 /* AppDelegate.h */,
 				76E030A4191AEB20004A8421 /* AppDelegate.m */,
 				76E030A6191AEB20004A8421 /* Main.storyboard */,
-				76E030A9191AEB20004A8421 /* ViewController.h */,
-				76E030AA191AEB20004A8421 /* ViewController.m */,
-				76AFC04B191CA2C500FB68FA /* NMOScrollingCell.h */,
-				76AFC04C191CA2C500FB68FA /* NMOScrollingCell.m */,
-				76AFC048191CA1B600FB68FA /* NMOCollectionViewController.h */,
-				76AFC049191CA1B600FB68FA /* NMOCollectionViewController.m */,
-				76AFC020191C80FE00FB68FA /* PTOCRImageScrollView.h */,
-				76AFC021191C80FE00FB68FA /* PTOCRImageScrollView.m */,
+				761846CA1B96711C00DD355B /* NMOCaptureManager.h */,
+				761846CB1B96711C00DD355B /* NMOCaptureManager.m */,
+				761846CE1B96711C00DD355B /* NMOCaptureViewController.h */,
+				761846CF1B96711C00DD355B /* NMOCaptureViewController.m */,
 				76E030AC191AEB20004A8421 /* Images.xcassets */,
 				76AFC04E191D48BA00FB68FA /* chi.tif */,
 				76E030EC191AF07A004A8421 /* WID-small.jpg */,
@@ -218,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				76E030D0191AEDB2004A8421 /* libGPUImage.a */,
-				76E030D2191AEDB2004A8421 /* GPUImageTests.octest */,
+				7626AA041AC08E0900476838 /* GPUImage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,18 +291,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		7626AA041AC08E0900476838 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 7626AA031AC08E0900476838 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		76E030D0191AEDB2004A8421 /* libGPUImage.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libGPUImage.a;
 			remoteRef = 76E030CF191AEDB2004A8421 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		76E030D2191AEDB2004A8421 /* GPUImageTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GPUImageTests.octest;
-			remoteRef = 76E030D1191AEDB2004A8421 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -346,12 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E030AB191AEB20004A8421 /* ViewController.m in Sources */,
-				76AFC04A191CA1B600FB68FA /* NMOCollectionViewController.m in Sources */,
-				76AFC04D191CA2C500FB68FA /* NMOScrollingCell.m in Sources */,
 				76E030A5191AEB20004A8421 /* AppDelegate.m in Sources */,
-				76AFC022191C80FE00FB68FA /* PTOCRImageScrollView.m in Sources */,
 				76E030A1191AEB20004A8421 /* main.m in Sources */,
+				761846D01B96711C00DD355B /* NMOCaptureManager.m in Sources */,
+				761846D21B96711C00DD355B /* NMOCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +474,7 @@
 				INFOPLIST_FILE = "GPUImageTest/GPUImageTest-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -505,6 +494,7 @@
 				INFOPLIST_FILE = "GPUImageTest/GPUImageTest-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
